@@ -1,0 +1,128 @@
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+       transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgba(85, 85, 85, 0.8), rgba(194, 190, 190, 0.6), rgba(140, 140, 140, 0.4)), url(../images/coffee.jpg);
+    color: rgb(65, 54, 41);
+}
+
+#header {
+    text-align: center;
+    color: white;
+}
+
+.grid { 
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 25px;
+    grid-auto-rows: min-content;
+}
+
+.grid-item {
+    background-color: rgb(240, 229, 217);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px rgba(77, 60, 39, 0.801);
+    margin-block: 10px;
+}
+
+#aboutMe {
+    grid-column: 1/4;
+}
+
+#personal {
+    grid-column: 4/10;
+}
+
+#profile {
+    grid-column: 10/13;
+    max-height: 40vh;
+    text-align: center;
+    animation-name: rotating;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-delay: 0.5s;
+}
+
+#my_photo {
+    max-width: 100%;
+    max-height: 100%; 
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+#startio {
+    grid-column: 1/6;
+    grid-row: span 2;
+}
+
+#education {
+    grid-column: 6/13;
+}
+
+#tools {
+    grid-column: 6/10;
+}
+
+#langs {
+    grid-column: 10/13;
+}
+
+#contact_form {
+    grid-column: 5/9;
+}
+
+textarea {
+    width: 100%;
+}
+
+#submit_btn {
+    text-align: center;
+}
+
+#submit_btn input {
+    border-radius: 5px;    
+    background-color: rgb(149 140 140);
+    border: unset;
+    padding: 5px 20px 5px 20px;
+    color: white;
+}
+
+#submit_btn input:hover {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .grid { 
+        display: block;
+    	padding: 30px;
+        margin-block: 10px;    	
+    }
+
+    h3 {
+        text-align: center;
+    }
+ 
+    #profile {
+        max-height: 100%;
+    }
+
+    #my_photo {
+        max-height: 40vh;
+        width: auto;
+    }
+} 

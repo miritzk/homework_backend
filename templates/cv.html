@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="static/css/cv.css">
+    <link rel="stylesheet" href="static/css/common.css">
+    <script src="static/js/cv.js"></script>
+    <title>Mirit's CV</title>
+</head>
+<body>
+    <div class="menu">
+        <a href="/">Home</a> <a href="/cv">Professional</a>
+    </div>
+
+    <div id='header'>
+        <h2>Mirit Zelichonok - CV</h2>
+    </div>
+    <!-- grid -->
+    <div class="grid">
+
+        <div id='aboutMe' class="grid-item">
+            <h3>About Me</h3>
+            <p>
+                <strong>Email:</strong> mirit380@gmail.com<br>
+<!--                <strong>Phone:</strong> 054-4807864<br>-->
+                <strong>Birth Year:</strong> 1997<br>
+                <strong>City:</strong> Herzliya<br>
+            </p>
+        </div>
+
+        <div id='personal' class="grid-item">
+            <h3>Personal</h3>
+            <p>
+                I have a high work ethic and self-learning ability. <br>
+                Organized, responsible, a team player and capable to work independently. <br>
+                Recommendations will be given upon request. <br>
+            </p>
+        </div>
+
+        <div id='profile' class="grid-item">
+            <img src="static/images/me.jpeg" alt="me" id="my_photo">
+        </div>
+
+        <div id='startio' class="grid-item">
+            <h3>Data Analyst at Start.io (formerly StartApp), Netanya, 2018-Today</h3>
+            <p>
+                - Researching and analyzing extensive amounts of data to identify trends for decision-making. <br>
+                - Building custom data-based products according to the customer requirements in favor of closing potential deals. <br>
+                - Developing automatic processes for ongoing tasks optimization. <br>
+                - Working with Vertica databases and Amazon Web Services (S3 and Athena). <br>
+            </p>
+        </div>
+
+        <div id='education' class="grid-item">
+            <h3>Education</h3>
+            <p>
+                - Third year <strong>Inforamtion Systems Management</strong> student, Ben Gurion University of the Negev. <br>
+                - 2012-2015, Rishonim High School in Herzliya – Bagrut certificate with honors, 35 units. <br>
+            </p>
+        </div>
+
+        <div id='tools' class="grid-item">
+            <h3>Programming languages and tools</h3>
+            <p>
+                - High-level SQL, experience with complex queries. <br>
+                - Java, Python and basic knowledge of HTML, CSS and JavaScript. <br>
+                - Working with Jenkins, QGIS and GitHub. <br>
+            </p>
+        </div>
+
+        <div id='langs' class="grid-item">
+            <h3>Languages</h3>
+            <p>
+                Hebrew – mother-tongue <br>
+                English – read, write and speak <br>
+                Russian – read and speak <br>
+            </p>
+        </div>
+
+        <div id="contact_form" class="grid-item">
+            <h3>Contact Me</h3>
+            <form action="/successful_contact" method="get">
+                <!-- full name -->
+                <label for="full_name">Full Name:</label><br>
+                <input type="text" id="full_name" name="full_name" required><br>
+                <!-- email address -->
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required pattern="\S+@\S+\.\S+"><br><br>
+                <!-- request -->
+                <label for="request">Your Message:</label><br>
+                <textarea id="request" name="request" cols="50" rows="4" required placeholder="Enter your request here"></textarea><br><br>
+                <!-- error message box -->
+                <div>
+                    <p id="error_msg"></p>
+                </div>
+                <!--submit -->
+                <div id="submit_btn">
+                    <input type="submit" value="Submit" onclick="checkEmail()">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
