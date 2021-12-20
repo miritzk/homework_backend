@@ -23,6 +23,17 @@ def cv_page():
 def successful_contact_page():
     return render_template('successful_contact.html')
 
+@app.route("/assignment8")
+def assignment8_page():
+    name = 'Mirit'
+    last_name = 'Zelichonok'
+    return render_template('assignment8.html',
+                           name=name,
+                           last_name=last_name,
+                           profile={'Favorite hobbie': 'Netflix',
+                                    'Favorite music': 'Ariana Grande',
+                                    'Favorite place': 'The beach'})
+
 
 if __name__ == '__main__':
     app.run(debug=True)

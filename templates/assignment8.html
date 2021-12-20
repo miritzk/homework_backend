@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Assignment8
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/css/assignment8.css">
+{% endblock %}
+
+{% block body %}
+    <!-- super -->
+    {{ super() }}
+    <div class="content">
+        <!-- filter -->
+        <h2>Hello {{ name | default('New', true) | upper() }} {{ last_name | default('User', true) | capitalize() }}!</h2>
+        <!-- if -->
+        {% if name %}
+            <p>How are you?</p>
+        {% else %}
+            <p>You need to log in!</p>
+        {% endif %}
+        <!-- loop -->
+        <h3>List of hobbies:</h3>
+            <ul>
+                {% for key, value in profile.items() %}
+                    <li>{{ key }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+    </div>
+{% endblock %}

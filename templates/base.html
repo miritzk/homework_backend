@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Base {% endblock %}</title> <!-- title block -->
+    <link rel="stylesheet" href="static/css/common.css">
+    {% block css %}  {% endblock %}
+</head>
+<body>
+{% block body %}
+<!--    include -->
+    {% include('menu.html') %}
+
+{% endblock %}
+
+</body>
+</html>
