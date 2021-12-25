@@ -12,6 +12,10 @@
 <body>
     {% include('menu.html') %}
 
+    {% if session.username %}
+        <h2>Hello {{ session.username }}!</h2>
+    {% endif %}
+
     <div id='header'>
         <h2>Mirit Zelichonok - CV</h2>
     </div>

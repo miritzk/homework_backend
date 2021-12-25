@@ -13,9 +13,14 @@
     {{ super() }}
     <div class="content">
         <!-- filter -->
-        <h2>Hello {{ name | default('New', true) | upper() }} {{ last_name | default('User', true) | capitalize() }}!</h2>
+        {% if session.username %}
+            <h2>Hello {{ session.username }}!</h2>
+        {% else %}
+            <h2>Hello {{ name | default('New', true) | upper() }} {{ last_name | default('User', true) | capitalize() }}!</h2>
+        {% endif %}
+
         <!-- if -->
-        {% if name %}
+        {% if name or session.username %}
             <p>How are you?</p>
         {% else %}
             <p>You need to log in!</p>
