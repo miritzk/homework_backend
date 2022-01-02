@@ -1,4 +1,5 @@
-from flask import Flask, redirect, url_for, render_template, request, session
+from flask import Flask, redirect, url_for, render_template, request, session, Blueprint
+# from interact_db import interact_db
 
 app = Flask(__name__)
 
@@ -62,6 +63,10 @@ def assignment9_page():
 def logout_func():
     session['username'] = ''
     return render_template('assignment9.html')
+
+#  assignment10
+from pages.assignment10.assignment10 import assignment10
+app.register_blueprint(assignment10)
 
 
 if __name__ == '__main__':
